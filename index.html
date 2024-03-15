@@ -257,7 +257,7 @@
         <div style="margin-bottom: 30px;">
           <p class="is-size-6" style="margin-bottom: 0;">
             Our results show that 1) replacing a learned high-level policy with a scripted one
-            leads to performance decrease, 2) off-the-shelf VLM performs
+            leads to worse performance, 2) off-the-shelf VLM performs
             poorly on complex long-horizon task, and 
             3) replacing language with one-hot encodings hurts model performance.
           </p>
@@ -268,8 +268,7 @@
         </div>
         <div>
           <p class="is-size-6" style="margin-bottom: 0;">
-            <b>Comparison to Flat BC Policy:</b> Overall, our hierarchical approach achieves higher success rates (%) 
-            than the non-hierarchical imitation learning method on long-horizon tasks.
+            <b>Comparison to Flat BC Policy:</b> Overall, our hierarchical approach achieves higher success rates than the non-hierarchical imitation learning method on long-horizon tasks.
           </p>
           <div class="has-text-centered">
             <img src="./static/images/ablation_flat.png" alt="Comparison to Flat Policy" class="responsive-image"
@@ -279,7 +278,7 @@
         <br>
         <div style="margin-bottom: 0;">
           <p class="is-size-6" style="margin-bottom: 10px;">
-            <b>Qualitative Results:</b>Through heatmaps, we visualize the cleaning efficacy across the plate surface, where brighter areas denote higher frequencies of effective wiping. 
+            <b>Qualitative Results:</b> Through heatmaps, we visualize the cleaning efficacy across the plate surface, where brighter areas denote higher frequencies of effective wiping. 
             YAY Robot demonstrates wider cleaning coverage after fine-tuning the high-level policy with human verbal feedback.
           </p>
           <div class="has-text-centered">
