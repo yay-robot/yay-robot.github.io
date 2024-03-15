@@ -1,4 +1,4 @@
-# Yell At Your Robot 🗣️ Improving On-the-Fly from Language Corrections
+# Yell At Your Robot 🗣️: Improving On-the-Fly from Language Corrections
 
 This is the repository that contains source code for the [YAY Robot website](https://yay-robot.github.io).
 
