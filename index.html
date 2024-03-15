@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Yell At Your Robot 🗣️ Improving On-the-Fly from Language Corrections">
+  <meta name="keywords" content="Robot Learning, Language">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yell At Your Robot 🗣️ Improving On-the-Fly from Language Corrections</title>
+
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR91FGL27V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CR91FGL27V');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/yay_icon.webp">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Yell At Your Robot 🗣️
+            </h1>
+            <h1 class="subtitle is-2 publication-title">
+              Improving On-the-Fly from Language Corrections
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://lucys0.github.io/">Lucy Xiaoyang Shi</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://huzheyuan.io/">Zheyuan Hu</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://tonyzhaozh.github.io/">Tony Z. Zhao</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://architsharma97.github.io/">Archit Sharma</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://kpertsch.github.io/">Karl Pertsch</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.eecs.berkeley.edu/~jianlanluo/">Jianlan Luo</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup>Stanford University</span>;
+              <span class="author-block"><sup>2</sup>University of California, Berkeley</span>;
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/"
+                      class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px;">
+              <p class="is-size-5">
+                Yell At Your (YAY) Robot enables robots to leverage verbal corrections to improve performance 
+                on complex long-horizon tasks like packing a ziploc bag, preparing trail-mix, and cleaning dishes.
+                It can incorporate verbal corrections in real-time and for continuous improvement.
+              </p>
+            </div>
+            <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/demo.mp4"
+              poster="./resources/loading-icon.gif">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Abstract</h2>
+      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
+        <p class="is-size-5">
+          Can humans help the robot to continuously improve its long-horizon task performance through intuitive and natural feedback? 
+          In this work, we make the following observation: high-level policies that index into sufficiently rich and expressive low-level language-conditioned skills can be readily supervised with human feedback in the form of language corrections. 
+          We show that even fine-grained corrections, such as small movements (“move a bit to the left”), can be effectively incorporated into high level policies, and that such corrections can be readily obtained from humans observing the robot and making occasional suggestions. 
+          This framework enables robots not only to rapidly adapt to real-time language feedback, but also incorporate this feedback into an iterative training scheme that improves the high-level policy's ability to correct errors in both low-level execution and high-level decision-making purely from verbal feedback. 
+          Our evaluation on real hardware shows that this leads to significant performance improvement in long-horizon, dexterous manipulation tasks without the need for any additional teleoperation.
+        </p>
+      </div>
+      <div class="has-text-centered">
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/teaser.mp4"
+          poster="./resources/loading-icon.gif">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Method</h2>
+      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
+        <p class="is-size-5">
+          We operate in a hierarchical setup where a high-level policy generates language instructions for a low-level policy that executes the corresponding skills. 
+          During deployment, humans can intervene through corrective language commands, temporarily overriding the high-level policy and directly influencing the low-level policy for on-the-fly adaptation. 
+          These interventions are then used to finetune the high-level policy, improving its future performance.
+        </p>
+      </div>
+      <div class="has-text-centered">
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/method.mp4"
+          poster="./resources/loading-icon.gif">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Architecture</h2>
+      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
+        <p class="is-size-5">
+          Our system processes RGB images and the robot’s current joint positions as inputs, outputting target joint positions for motor actions. 
+          The high-level policy uses a Vision Transformer to encode visual inputs and predicts language embeddings. 
+          The low-level policy uses ACT, a Transformer-based model to generate precise motor actions for the robot, guided by language instructions. 
+          This architecture enables the robot to interpret commands like “Pick up the bag” and translate them into targeted joint movements.
+        </p>
+        <div class="has-text-centered">
+          <img src="./static/images/architecture.png" alt="System Architecture" 
+            style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Quantitative Results</h2>
+      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
+        <div style="margin-bottom: 30px;">
+          <p class="is-size-5" style="margin-bottom: 0;">
+            Language corrections not only improve task success in real-time, 
+            but also enhance the autonomous policy’s performance at each stage of the tasks by 20% on average through fine-tuning.
+          </p>
+          <div class="has-text-centered">
+            <img src="./static/images/key_results.png" alt="Key Results" 
+              style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+          </div>
+        </div>
+        <div>
+          <p class="is-size-5" style="margin-bottom: 0;">
+            Iterative Improvement: YAY Robot’s success rates for packing different numbers of items show significant improvement with each iteration of user verbal feedback collection and fine-tuning, 
+            approaching the oracle’s performance (dashed lines) at each stage of the task.
+          </p>
+          <div class="has-text-centered">
+            <img src="./static/images/improvement.png" alt="Iterative Improvement" class="responsive-image" 
+              style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Bag Packing</h2>
+      <div class="has-text-centered">
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/bag.mp4"
+          poster="./resources/loading-icon.gif">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Trail Mix Preparation</h2>
+      <div class="has-text-centered">
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/trail_mix.mp4"
+            poster="./resources/loading-icon.gif">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Plate Cleaning</h2>
+      <div class="has-text-centered">
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/plate.mp4"
+            poster="./resources/loading-icon.gif">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Ablations</h2>
+      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
+        <div style="margin-bottom: 30px;">
+          <p class="is-size-5" style="margin-bottom: 0;">
+            Our results show that 1) replacing a learned high-level policy with a scripted one
+            leads to performance decrease, 2) off-the-shelf VLM performs
+            poorly on complex long-horizon task, and 
+            3) replacing language with one-hot encodings hurts model performance.
+          </p>
+          <div class="has-text-centered">
+            <img src="./static/images/ablation.png" alt="Ablations" class="responsive-image"
+              style="display: block; margin-left: auto; margin-right: auto">
+          </div>
+        </div>
+        <div>
+          <p class="is-size-5" style="margin-bottom: 0;">
+            Comparison to Flat Policy: Overall, our hierarchical approach achieves higher success rates (%) 
+            than the non-hierarchical imitation learning method on long-horizon tasks.
+          </p>
+          <div class="has-text-centered">
+            <img src="./static/images/ablation_flat.png" alt="Comparison to Flat Policy" class="responsive-image"
+              style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+        </div>
+        <div style="margin-bottom: 30px;">
+          <p class="is-size-5" style="margin-bottom: 10px;">
+            Through heatmaps, we visualize the cleaning efficacy across the plate surface, where brighter areas denote higher frequencies of effective wiping. 
+            YAY Robot demonstrates wider cleaning coverage after fine-tuning the high-level policy with human verbal feedback.
+          </p>
+          <div class="has-text-centered">
+            <img src="./static/images/plate_heatmap.png" alt="Plate Heatmap" 
+              style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <h2 class="title is-3" style="text-align: center;">Failure Cases</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="./static/images/case_1.jpg" alt="Failure Case 1" class="img-responsive">
+        </div>
+        <div class="item">
+          <img src="./static/images/case_2.jpg" alt="Failure Case 2" class="img-responsive">
+        </div>
+        <div class="item">
+          <img src="./static/images/case_3.jpg" alt="Failure Case 3" class="img-responsive">
+        </div>
+        <div class="item">
+          <img src="./static/images/case_4.jpg" alt="Failure Case 4" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container content">
+      <h2 class="title">BibTeX</h2>
+      <pre>
+        <code>
+          TODO
+        </code>
+      </pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/abs/">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website was built off of <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a> source
+              code
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
