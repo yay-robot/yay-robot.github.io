@@ -9,14 +9,14 @@
   <title>Yell At Your Robot 🗣️ Improving On-the-Fly from Language Corrections</title>
 
   <!-- Google tag (gtag.js) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-CR91FGL27V"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FPW3WTQBE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-CR91FGL27V');
-  </script> -->
+    gtag('config', 'G-5FPW3WTQBE');
+  </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -76,7 +76,7 @@
 
             <div class="is-size-6 publication-authors">
               <span class="author-block"><sup>1</sup>Stanford University</span>;
-              <span class="author-block"><sup>2</sup>University of California, Berkeley</span>;
+              <span class="author-block"><sup>2</sup>University of California, Berkeley</span>
             </div>
 
             <div class="column has-text-centered">
@@ -111,19 +111,22 @@
                 </span>
               </div>
             </div>
-            <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px;">
-              <p class="is-size-5">
-                <b>TL;DR:</b> Yell At Your Robot (YAY Robot) leverages verbal corrections to improve robot performance 
+            <!-- <b>TL;DR:</b> -->
+            <div class="content has-text-justified" style="padding-left: 12px; padding-right: 12px;">
+              <p class="is-size-6">
+                Yell At Your Robot (YAY Robot) leverages verbal corrections to improve robot performance 
                 on <b>complex long-horizon tasks</b> like packing a ziploc bag, preparing trail-mix, and cleaning dishes.
                 It can incorporate language corrections <b>in real-time</b> and for <b>continuous improvement</b>.
               </p>
+              <div class="has-text-centered">
+                <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/demo_encoded.mp4"
+                  poster="./resources/loading-icon.gif">
+                </video>
+                <p class="is-size-5">
+                  🔈 try sound on!
+                </p>
+              </div>
             </div>
-            <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/demo_encoded.mp4"
-              poster="./resources/loading-icon.gif">
-            </video>
-            <p class="is-size-5">
-              🔈 try sound on!
-            </p>
           </div>
         </div>
       </div>
@@ -133,8 +136,8 @@
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Abstract</h2>
-      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
-        <p class="is-size-5">
+      <div class="content has-text-justified" style="margin-bottom: auto;">
+        <p class="is-size-6">
           Can humans help the robot to continuously improve its long-horizon task performance through intuitive and natural feedback? 
           In this work, we make the following observation: high-level policies that index into sufficiently rich and expressive low-level language-conditioned skills can be readily supervised with human feedback in the form of language corrections. 
           We show that even fine-grained corrections, such as small movements (“move a bit to the left”), can be effectively incorporated into high level policies, and that such corrections can be readily obtained from humans observing the robot and making occasional suggestions. 
@@ -153,8 +156,8 @@
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Method</h2>
-      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
-        <p class="is-size-5">
+      <div class="content has-text-justified" style="margin-bottom: auto;">
+        <p class="is-size-6">
           We operate in a hierarchical setup where a high-level policy generates language instructions for a low-level policy that executes the corresponding skills. 
           During deployment, humans can intervene through corrective language commands, temporarily overriding the high-level policy and directly influencing the low-level policy for on-the-fly adaptation. 
           These interventions are then used to finetune the high-level policy, improving its future performance.
@@ -171,8 +174,8 @@
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Architecture</h2>
-      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
-        <p class="is-size-5">
+      <div class="content has-text-justified" style="margin-bottom: auto;">
+        <p class="is-size-6">
           Our system processes RGB images and the robot's current joint positions as inputs, outputting target joint positions for motor actions. 
           The high-level policy uses a Vision Transformer to encode visual inputs and predicts language embeddings. 
           The low-level policy uses ACT, a Transformer-based model to generate precise motor actions for the robot, guided by language instructions. 
@@ -189,9 +192,9 @@
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Quantitative Results</h2>
-      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
+      <div class="content has-text-justified" style="margin-bottom: auto;">
         <div style="margin-bottom: 30px;">
-          <p class="is-size-5" style="margin-bottom: 0;">
+          <p class="is-size-6" style="margin-bottom: 0;">
             Language corrections not only improve task success in real-time, 
             but also enhance the autonomous policy's performance at each stage of the tasks by 20% on average through fine-tuning.
           </p>
@@ -202,7 +205,7 @@
         </div>
         <div>
           <br>
-          <p class="is-size-5" style="margin-bottom: 0;">
+          <p class="is-size-6" style="margin-bottom: 0;">
             <b>Iterative Improvement:</b> YAY Robot's success rates for packing different numbers of items show significant improvement with each iteration of user verbal feedback collection and fine-tuning, 
             approaching the oracle's performance (dashed lines) at each stage of the task.
           </p>
@@ -250,9 +253,9 @@
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Ablations</h2>
-      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
+      <div class="content has-text-justified" style="margin-bottom: auto;">
         <div style="margin-bottom: 30px;">
-          <p class="is-size-5" style="margin-bottom: 0;">
+          <p class="is-size-6" style="margin-bottom: 0;">
             Our results show that 1) replacing a learned high-level policy with a scripted one
             leads to performance decrease, 2) off-the-shelf VLM performs
             poorly on complex long-horizon task, and 
@@ -264,7 +267,7 @@
           </div>
         </div>
         <div>
-          <p class="is-size-5" style="margin-bottom: 0;">
+          <p class="is-size-6" style="margin-bottom: 0;">
             <b>Comparison to Flat BC Policy:</b> Overall, our hierarchical approach achieves higher success rates (%) 
             than the non-hierarchical imitation learning method on long-horizon tasks.
           </p>
@@ -274,8 +277,8 @@
           </div>
         </div>
         <br>
-        <div style="margin-bottom: 30px;">
-          <p class="is-size-5" style="margin-bottom: 10px;">
+        <div style="margin-bottom: 0;">
+          <p class="is-size-6" style="margin-bottom: 10px;">
             <b>Qualitative Results:</b>Through heatmaps, we visualize the cleaning efficacy across the plate surface, where brighter areas denote higher frequencies of effective wiping. 
             YAY Robot demonstrates wider cleaning coverage after fine-tuning the high-level policy with human verbal feedback.
           </p>
@@ -290,10 +293,11 @@
   <section class="section" style="padding-bottom: 0;">
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Failure Cases</h2>
-      <div class="content has-text-justified" style="margin-left: 20px; margin-right: 20px; margin-bottom: auto;">
-        <p class="is-size-5">
+      <div class="content has-text-justified" style="margin-left: 5px; margin-bottom: auto;">
+        <p class="is-size-6">
           Welcome to the real world! It sucks. You're gonna love it.  -- <i>Friends</i>
         </p>
+      </div>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <img src="./static/images/case_1.jpg" alt="Failure Case 1" class="img-responsive">
