@@ -113,11 +113,11 @@
             </div>
             <!-- <b>TL;DR:</b> -->
             <div class="content has-text-justified" style="padding-left: 12px; padding-right: 12px;">
-              <p class="is-size-6">
+              <!-- <p class="is-size-6">
                 Yell At Your Robot (YAY Robot) leverages verbal corrections to improve robot performance 
                 on <b>complex long-horizon tasks</b> like packing a ziploc bag, preparing trail-mix, and cleaning dishes.
                 It can incorporate language corrections <b>in real-time</b> and for <b>continuous improvement</b>.
-              </p>
+              </p> -->
               <div class="has-text-centered">
                 <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/demo_encoded.mp4"
                   poster="./resources/loading-icon.gif">
@@ -138,6 +138,13 @@
       <h2 class="title is-3" style="text-align: center;">Abstract</h2>
       <div class="content has-text-justified" style="margin-bottom: auto;">
         <p class="is-size-6">
+          Hierarchical policies that combine language and
+          low-level control have been shown to perform impressively long-horizon robotic tasks, by leveraging either zero-shot high-level
+          planners like pretrained language and vision-language models
+          (LLMs/VLMs) or models trained on annotated robotic demonstrations. However, for complex and dexterous skills, attaining
+          high success rates on long-horizon tasks still represents a major
+          challenge -- the longer the task is, the more likely it is that
+          some stage will fail. 
           Can humans help the robot to continuously improve its long-horizon task performance through intuitive and natural feedback? 
           In this work, we make the following observation: high-level policies that index into sufficiently rich and expressive low-level language-conditioned skills can be readily supervised with human feedback in the form of language corrections. 
           We show that even fine-grained corrections, such as small movements (“move a bit to the left”), can be effectively incorporated into high level policies, and that such corrections can be readily obtained from humans observing the robot and making occasional suggestions. 
@@ -164,9 +171,11 @@
         </p>
       </div>
       <div class="has-text-centered">
-        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/method.mp4"
+        <!-- <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/method.mp4"
           poster="./resources/loading-icon.gif">
-        </video>
+        </video> -->
+        <img src="./static/images/method.jpeg" alt="Method" class="responsive-image"
+          style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
       </div>
     </div>
   </section>
@@ -221,7 +230,7 @@
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Bag Packing</h2>
       <div class="has-text-centered">
-        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/bag.mp4"
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/bag.mp4" width="70%"
           poster="./resources/loading-icon.gif">
         </video>
       </div>
@@ -232,7 +241,7 @@
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Trail Mix Preparation</h2>
       <div class="has-text-centered">
-        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/trail_mix.mp4"
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/trail_mix.mp4" width="70%"
             poster="./resources/loading-icon.gif">
         </video>
       </div>
@@ -243,7 +252,7 @@
     <div class="container">
       <h2 class="title is-3" style="text-align: center;">Plate Cleaning</h2>
       <div class="has-text-centered">
-        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/plate.mp4"
+        <video preload="auto" controls="" autoplay="" loop="" muted="" playsinline="" src="./static/videos/plate.mp4" width="70%"
             poster="./resources/loading-icon.gif">
         </video>
       </div>
