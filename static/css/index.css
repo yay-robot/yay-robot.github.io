@@ -157,3 +157,15 @@ body {
     width: 100%;
   }
 }
+
+/* Default style applies on desktop and larger devices */
+.responsive-video {
+  width: 75%;
+}
+
+/* Media query for screens that are 768px wide or less */
+@media (max-width: 768px) {
+  .responsive-video {
+    width: 100%;
+  }
+}
